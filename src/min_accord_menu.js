@@ -30,7 +30,13 @@ function doSelectOne(triggerElem){
   /* toggle selection state of item. No selection from list is allowed*/
   if (triggerElem.classList.contains('selected')){
     triggerElem.classList.remove('selected');
-    /* Call a function that dows what is necessary when the selection is removed */
+    /* Call a function that does what is necessary when the selection is removed */
+    /* Set to default if available */
+    let parent = triggerElem.parentElement;
+    let defaultelem = parent.querySelector('.defaultselection');
+    if (defaultelem){
+      defaultelem.classList.add('selected');
+    }
   } else {
     triggerElem.classList.add('selected');
     /* Unselect all other items in the menu and submenus*/

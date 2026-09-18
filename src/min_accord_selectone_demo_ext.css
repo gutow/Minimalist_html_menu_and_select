@@ -1,0 +1,38 @@
+
+/* Formatting unrelated to menus/selection behavior
+for demo purposes.*/
+.content {
+  position:fixed;
+  top: 3em;
+}
+.colorbox {
+  border:none;
+  margin:0;
+  padding:0;
+  height:1em;
+  width:1em;
+}
+.colorbox.cyan {
+  background-color: cyan;
+}
+.colorbox.magenta{
+  background-color: magenta;
+}
+.colorbox.blue{
+  background-color: blue;
+}
+.colorbox.red{
+  background-color: red;
+}
+.colorbox.green{
+  background-color: green;
+}
+.colorbox.yellow{
+  background-color: yellow;
+}
+.colorbox.brown{
+  background-color: brown;
+}
+.colorbox.pink{
+  background-color: pink;
+}

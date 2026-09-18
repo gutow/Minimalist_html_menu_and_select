@@ -2,163 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
   <title>Minimalist Accordian Select One</title>
-  <style>
-    /* selectOneList does not display the selected li from submenus/lists. No fix
-    yet*/
-    body {
-      display:block;
-    }
-    .wrapper {
-      width:98%;
-      position:relative;
-      left: 1%;
-      display: block;
-    }
-    #menu_div {
-      position: fixed;
-      top:0px;
-      left:0px;
-      display: inline-flex;
-      flex-wrap: wrap;
-      z-index: 2;
-    }
-    #content {
-      position:fixed;
-      margin-top:40px;
-    }
-    /* hide the checkbox*/
-    .selectOneList input{
-      display: none;
-    }
-    .selectOneList input ~ li{
-		 display: none;
-		}
-		.selectOneList input:checked  ~ li {
-		  display: block;
-      position:relative;
-      background-color: aliceblue;
-      z-index: 9999;
-		}
-    .selectOneList input:checked  ~ li:hover {
-      background-color: lightgrey;
-		}
-    .selectOneList input:checked ~ hr {
-      border: 1px dotted black;
-      margin:0;
-      display:block;
-    }
-    .selectOneList input ~ hr {
-      display:none;
-    }
-    .mainmenu label{
-      /* Force the label to show up. May cause problems with submenus*/
-      cursor: pointer;
-      display: block;
-      /* prettifying*/
-      background-color: inherit;
-      margin: 0;
-      padding-left: 5px;
-      padding-right: 5px;
-      position: relative;
-      text-wrap: nowrap;
-      text-align: center;
-      border-left:1px solid grey;
-      border-right:1px solid grey;
-		}
-    /* down pointing triangle to append to labels that are
-      sub items of a mainmenu class.
-     */
-    .mainmenu label:after{
-      content:" \25BE";
-    }
-    /* ul {
-      padding-left: 0;
-      margin:2px;
-    }*/
-
-    .submenu label{
-      /* Force the label to show up. May cause problems with submenus*/
-      cursor: pointer;
-      display: block;
-      /* prettifying*/
-      background-color: aliceblue;
-      margin: 0;
-      padding: 0;
-      position: relative;
-      text-wrap: nowrap;
-      text-align: left;
-		}
-
-    ul.selectOneList {
-      list-style-type: none;
-      list-style-position: inside;
-      padding:0;
-      margin:0;
-    }
-    .selectOneList li{
-      cursor:pointer;
-      padding-left: 0;
-      border-left: 1px solid grey;
-      border-right: 1px solid grey;
-    }
-    .selectOneList li:last-child {
-      border-bottom:1px solid grey;
-    }
-    .selectOneList li:first-child{
-      border-top:1px solid grey;
-    }
-    .submenu li{
-      padding-left:4px;
-      border:unset;
-    }
-    .submenu label{
-      border:unset;
-    }
-    .selectOneList li:hover{
-      background-color:lightgrey;
-    }
-   .selectOneList label:hover{
-      background-color:lightgrey;
-    }
-   .selectOneList li.selected {
-     display: block!important;
-     background-color: whitesmoke;
-     border:1px solid grey;
-   }
-   .selectOneList li.selected:before {
-     content: '\2713';
-   }
-  </style>
+  <link rel="stylesheet" type="text/css" href="min_accord_selectone.css"/>
+  <link rel="stylesheet" type="text/css" href="min_accord_selectone_demo_ext.css"/>
   <script src="min_accord_menu.js"></script>
 </head>
 <body>
 <div class="wrapper">
-  <div id="menu_div">
-    <!--making the inputs for the menus all radios of the same name, allows only one
-    menu open at a time. This also means that the selected menu cannot be closed by
-    clicking on it again...Is that a good thing?-->
+  <div class="menu_div">
     <ul id="menu1" class="selectOneList mainmenu">
       <input type="checkbox" name="menus" id="menu1_check"/>
-      <label for="menu1_check">Menu 1</label>
-      <li id="1_1" >Item 1 is very long</li>
-      <li id="1_2" >Item 2</li>
+      <label for="menu1_check">Orbital</label>
+      <li class="selected defaultselection">None</li>
+      <li id="sp+" >sp<sup>+</sup></li>
+      <li id="sp-" >sp<sup>-</sup></li>
       <hr>
-      <li id="1_3" >Item 3</li>
-      <li id="1_4" >Item 4</li>
+      <li id="2py" >2p<sub>y</sub></li>
+      <li id="2pz" >2p<sub>z</sub></li>
     </ul>
     <ul id="menu2"  class="selectOneList mainmenu">
       <input type="checkbox" name="menus" id="menu2_check"/>
-      <label for="menu2_check">Menu 2</label>
-      <li id="2_1">Item 1</li>
-      <li id="2_2">Item 2</li>
+      <label for="menu2_check">Color</label>
+      <li id="red_blue_color" class="selected defaultselection">
+        <div class="colorbox red complexMenuItem"></div>
+        <div class="colorbox blue complexMenuItem"></div>
+        Red/Blue
+      </li>
+      <li id="green_yellow_color" >
+          <div class="colorbox green complexMenuItem"></div>
+          <div class="colorbox yellow complexMenuItem"></div>
+          Green/Yellow
+      </li>
+      <li id="cyan_magenta_color">
+        <div class="colorbox cyan complexMenuItem"></div>
+        <div class="colorbox magenta complexMenuItem"></div>
+        Cyan/Magenta
+      </li>
+      <li id="brown_pink_color">
+        <div class="colorbox brown complexMenuItem"></div>
+        <div class="colorbox pink complexMenuItem"></div>
+        Brown/Pink
+      </li>
     </ul>
     <ul id="menu3"  class="selectOneList mainmenu">
       <input type="checkbox" name="menus" id="menu3_check"/>
-      <label for="menu3_check">Menu 3</label>
-      <li id="3_1">Item 1</li>
-      <li id="3_2">Item 2</li>
-      <li id="3_3">Item 3</li>
+      <label for="menu3_check">Display Mode</label>
+      <li id="solid_display" class="defaultselection">Solid</li>
+      <li id="translucent_display" class="selected">Translucent</li>
+      <li id="mesh_display">Mesh</li>
+      <li id="dot_display">Dots</li>
     </ul>
     <ul id="menu4" class="selectOneList mainmenu">
       <input type="checkbox" name="menus" id="menu4_check"/>
@@ -189,7 +82,7 @@
       <li id="7_3">Item 3</li>
     </ul>
   </div>
-<div id="content">
+<div class="content">
   Some stuff for the rest of the page:
   <ul>
     <li><a href="https://cms.gutow.uwosh.edu" target="_blank">A test link.</a></li>
