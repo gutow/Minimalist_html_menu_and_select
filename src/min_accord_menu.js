@@ -26,13 +26,39 @@ function doMenuItem(triggerElem){
   closeMenu(triggerElem);
 }
 
+function doSelectOne(triggerElem){
+  /* toggle selection state of item. No selection from list is allowed*/
+  if (triggerElem.classList.contains('selected')){
+    triggerElem.classList.remove('selected');
+    /* Call a function that dows what is necessary when the selection is removed */
+  } else {
+    triggerElem.classList.add('selected');
+    /* Unselect all other items in the menu and submenus*/
+    let sibling = triggerElem.previousElementSibling;
+    while (sibling){
+      sibling.classList.remove('selected');
+      sibling = sibling.previousElementSibling;
+    }
+    sibling = triggerElem.nextElementSibling;
+    while (sibling){
+      sibling.classList.remove('selected');
+      sibling = sibling.nextElementSibling;
+    }
+  }
+  closeMenu(triggerElem);
+  /* Call a function that does what is necessary when the selection is changed */
+}
+
 function handleClickEvent(event){
   /*window.alert(event.target.nodeName)*/
   if (event.target.nodeName=="LI" && event.target.parentNode.classList.contains('menuList')){
-    doMenuItem(event.target)
-  } else {
-    return
+    doMenuItem(event.target);
+    } else {
+    if (event.target.nodeName=="LI" && event.target.parentNode.classList.contains('selectOneList')){
+    doSelectOne(event.target);
+    }
   }
+  return;
 }
 function addListeners(){
     // This adds the listeners. Goal is to have a limited number and take advantage of events bubbling up through the DOM.
