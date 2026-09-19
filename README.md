@@ -99,6 +99,6 @@ content below them.
 
 ### Actions in response to selection of an item from the menu or selector
 These need to be javascript calls from either the `doMenuItem` or
-`doSelectOne` functions in `min_accord_menu.js`. The expectation is that
+`doSelectOne` functions in `src/min_accord_menu.js`. The expectation is that
 anyone using this code will build on the code in this js file. To keep the
 code light weight this is not written as a library with a callback handler.
