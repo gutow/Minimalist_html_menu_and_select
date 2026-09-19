@@ -90,9 +90,15 @@ The included css puts these elements all in one line.
 ```
 ### Formatting
 The formatting is all controlled by the css style sheets. There are
-currently three (?min_accord_selectone.css, min_accord_menu.css and
+currently three (min_accord_selectone.css, min_accord_menu.css and
 min_accord_selectone_demo_ext.css)..need notes on getting menus to overlay
 content below them.
 * Items to be overlapped must have fixed position within the div that
   contains the items and the menu wrapping div.
 * The menu wrapping div must have a z-index > then the other contents.
+
+### Actions in response to selection of an item from the menu or selector
+These need to be javascript calls from either the `doMenuItem` or
+`doSelectOne` functions in `min_accord_menu.js`. The expectation is that
+anyone using this code will build on the code in this js file. To keep the
+code light weight this is not written as a library with a callback handler.
