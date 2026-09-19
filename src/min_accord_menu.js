@@ -20,7 +20,7 @@ function closeMenu(triggerElem){
 
 function doMenuItem(triggerElem){
   const itemID = triggerElem.id;
-  window.alert('The clicked item:'+itemID);
+  /*window.alert('The clicked item:'+itemID);*/
   switch (itemID) {
     case '':
       /* This is where to put your action or call appropriate functions

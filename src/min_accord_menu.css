@@ -1,0 +1,105 @@
+body {
+  display:block;
+}
+.wrapper {
+  width:98%;
+  position:relative;
+  left: 1%;
+  display: block;
+}
+#menu_div {
+  position: fixed;
+  top:0px;
+  left:0px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+#content {
+  position:fixed;
+  margin-top:40px;
+}
+/* hide the checkbox*/
+.menuList input{
+  display: none;
+}
+.menuList input ~ li{
+ display: none;
+}
+.menuList input:checked  ~ li {
+  display: block;
+  position:relative;
+  background-color: aliceblue;
+  z-index: 2;
+}
+.menuList input:checked  ~ li:hover {
+  background-color: lightgrey;
+}
+.mainmenu label{
+  /* Force the label to show up. May cause problems with submenus*/
+  cursor: pointer;
+  display: block;
+  /* prettifying*/
+  background-color: beige;
+  margin: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+  text-wrap: nowrap;
+  border-left:1px solid grey;
+  border-right:1px solid grey;
+}
+/* down pointing triangle to append to labels that are
+  sub items of a mainmenu class.
+ */
+.mainmenu label:after{
+  content:" \25BE";
+}
+/* ul {
+  padding-left: 0;
+  margin:2px;
+}*/
+
+.submenu label{
+  /* Force the label to show up. May cause problems with submenus*/
+  cursor: pointer;
+  display: block;
+  /* prettifying*/
+  background-color: aliceblue;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-wrap: nowrap;
+}
+
+ul.menuList {
+  list-style-type: none;
+  list-style-position: inside;
+  padding:0;
+  margin:0;
+}
+.menuList li{
+  cursor:pointer;
+  padding-left: 0;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+}
+.menuList li:last-child {
+  border-bottom:1px solid grey;
+}
+.menuList li:first-child{
+  border-top:1px solid grey;
+}
+.submenu li{
+  padding-left:4px;
+  border:unset;
+}
+.submenu label{
+  border:unset;
+}
+.menuList li:hover{
+  background-color:lightgrey;
+}
+.menuList label:hover{
+  background-color:lightgrey;
+}
