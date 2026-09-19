@@ -1,3 +1,10 @@
+/* This supports css based menus and select dropdowns that can support
+html within each menu item, allowing for formatted text, images, etc...
+
+The idea was to have minimal javascript with most of the menu behavior
+provided by the css.
+J. Gutow (gutow@uwosh.edu) 9-2026.
+ */
 function closeMenu(triggerElem){
   const parent=triggerElem.parentNode;
   const whichmenu = parent.id;

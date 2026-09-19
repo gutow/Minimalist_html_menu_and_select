@@ -86,6 +86,7 @@ ul.selectOneList {
  background-color: whitesmoke;
  border:1px solid grey;
 }
+/* add checkmark before the selected item */
 .selectOneList li.selected:before {
  content: '\2713';
 }
