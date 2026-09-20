@@ -1,5 +1,10 @@
-# Minimalist HTML Menu and Select Dropdowns with Formattable Content
-_Created by Jonathan Gutow <[gutow@uwos.edu](mailto:gutow@uwosh.edu)> 9-2026_
+# Minimalist HTML Menu and Select Dropdowns with Formattable Content 
+
+[<img src="src/GitHub_Lockup_Black.svg" style="height:2em;">](https://github.com/gutow/Minimalist_html_menu_and_select)
+
+_Created by Jonathan Gutow <[gutow@uwos.edu](mailto:gutow@uwosh.edu)> 
+9-2026_
+
 ## Introduction
 These dropdown menu and select dropdown templates were created to facilitate
 the updatiang of my tutorials to help people visualize
