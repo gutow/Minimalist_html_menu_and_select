@@ -5,7 +5,7 @@ These dropdown menu and select dropdown templates were created to facilitate
 the updatiang of my tutorials to help people visualize
 [atomic orbiatals](http://localhost:8083/Website_for_GIT/Orbitals/Cl/Cl_AOs.shtml)
 ,
-[hybrid orbitals and multiple bonds]((https://cms.gutow.uwosh.edu/gutow/Orbitals/N/What_are_hybrid_orbitals.shtml)).
+[hybrid orbitals and multiple bonds](https://cms.gutow.uwosh.edu/gutow/Orbitals/N/What_are_hybrid_orbitals.shtml).
 These tutorials make use of [JSmol](https://jmol.org) to provide interactive
 3-D representations of electron orbitals on atoms and molecules. This
 requires extensive use of the Jmol scripting language. The menus are used to
@@ -16,6 +16,10 @@ is my solution until browsers all consistently implement placement of
 `popover` elements.
 
 ## Capabilities
+You can try the 
+[dropdown menus here](https://gutow.github.io/Tests/src/Min_accord_menu.html) 
+and the 
+[select dropdown here](https://gutow.github.io/Tests/src/Min_accord_selectone.html).
 * Items in the dropdowns may be any html element that can be embedded in a
   `<li>`. So, formatting, images, etc. are allowed.
 * Styling is done using annotated css style sheets to facilitate adaption to
