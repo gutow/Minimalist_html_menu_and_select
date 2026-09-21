@@ -100,8 +100,8 @@ The included css puts these elements all in one line.
 ### Formatting
 The formatting is all controlled by the css style sheets. There are
 currently three (min_accord_selectone.css, min_accord_menu.css and
-min_accord_selectone_demo_ext.css)..need notes on getting menus to overlay
-content below them.
+min_accord_selectone_demo_ext.css). Notes on getting menus to overlay
+content below them:
 * Items to be overlapped must have fixed position within the div that
   contains the items and the menu wrapping div.
 * The menu wrapping div must have a z-index > then the other contents.
