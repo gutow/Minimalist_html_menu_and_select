@@ -7,7 +7,7 @@ _Created by Jonathan Gutow <[gutow@uwos.edu](mailto:gutow@uwosh.edu)>
 
 ## Introduction
 These dropdown menu and select dropdown templates were created to facilitate
-the updatiang of my tutorials to help people visualize
+the updating of my tutorials to help people visualize
 [atomic orbiatals](http://localhost:8083/Website_for_GIT/Orbitals/Cl/Cl_AOs.shtml)
 ,
 [hybrid orbitals and multiple bonds](https://cms.gutow.uwosh.edu/gutow/Orbitals/N/What_are_hybrid_orbitals.shtml).
