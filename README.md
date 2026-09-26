@@ -22,7 +22,7 @@ is my solution until browsers all consistently implement placement of
 
 ## Capabilities
 You can try the 
-[dropdown menus here]([https://gutow.github.io/Min_accord_menu.html](https://gutow.github.io/Minimalist_html_menu_and_select/src/Min_accord_menu.html)) 
+[dropdown menus here](https://gutow.github.io/Minimalist_html_menu_and_select/src/Min_accord_menu.html)
 and the 
 [select dropdown here](https://gutow.github.io/Minimalist_html_menu_and_select/src/Min_accord_selectone.html).
 * Items in the dropdowns may be any html element that can be embedded in a
